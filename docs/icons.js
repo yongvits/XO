@@ -1,5 +1,9 @@
 'use strict';
 const UI_ICONS={
+robot:'M8 3h8v3H8ZM5 7h14v12H5ZM2 11h3m14 0h3M9 11v2m6-2v2m-6 3h6M9 19v3m6-3v3',
+leaf:'M20 4c-1 8-3 14-9 14a6 6 0 0 1-6-6c0-6 8-7 15-8ZM5 20l9-10',
+levels:'M5 16v4m7-10v10m7-16v16',
+flame:'M13 3c1 5-3 6-3 9 0 2 2 3 3 1 3 1 4 3 3 5-1 4-9 4-11-1C2 11 9 9 13 3Z',
 arrow:'M5 12h14m-5-5 5 5-5 5',
 refresh:'M20 7v5h-5M4 17v-5h5M6.1 7a7 7 0 0 1 11.5-1L20 9M4 15l2.4 3A7 7 0 0 0 18 17',
 share:'M12 16V3m-5 5 5-5 5 5M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7',
@@ -17,3 +21,4 @@ close:'m6 6 12 12M18 6 6 18'
 };
 function icon(name){return '<svg class="ui-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="'+(UI_ICONS[name]||UI_ICONS.play)+'"/></svg>'}
 function setButton(el,symbol,label){el.innerHTML=icon(symbol);const span=document.createElement('span');span.textContent=label;el.append(span)}
+
