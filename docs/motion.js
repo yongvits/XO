@@ -1,5 +1,5 @@
 'use strict';
-/* Animate between rendered positions, never between unconfirmed game states. */
+/* Animate between rendered positions, including locally predicted moves awaiting server confirmation. */
 const BoardMotion=(()=>{
 let previous=null,busy=false,animations=[],epoch=0,rerender=null,root=null;
 const token=p=>p&&typeof p==='object'?p.side+(p.king?'K':'M'):p||'';
@@ -42,3 +42,4 @@ function mount(board,meta,paint,onFinish){
 }
 return {mount,reset,get busy(){return busy}};
 })();
+
