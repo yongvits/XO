@@ -4,7 +4,7 @@ The GitHub Pages client uses HTTPS JSON APIs at https://yongvit-xo-room-service.
 
 Server project: appgprj_6aeaa4a521d081918abc71d28388e271
 
-The service is deployed owner-private until public access is approved. Do not merge this client branch while the service is private; GitHub Pages visitors cannot authenticate to the private API. No service bypass credentials belong in this repository or client code.
+Public service access was approved by the owner on 2026-11-04 and is enabled. The GitHub Pages client connects anonymously to the room roster; seat-specific game actions require a per-player token. No service bypass credentials belong in this repository or client code.
 
 API: GET /v1/rooms?game=xo|checkers, POST /v1/join, /v1/poll, /v1/action, /v1/leave. Public rosters expose nicknames, sides and occupancy only. Room actions and full game state require an unguessable per-tab bearer token, stored as a hash on the server. The server validates every move. Atomic R2 conditional writes prevent double seating and stale actions. Requests are CORS restricted to https://yongvits.github.io.
 
